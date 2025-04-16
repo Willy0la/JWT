@@ -5,6 +5,7 @@ import express from "express";
 import update from "../controller/update.js";
 import login from "../controller/login.js";
 import authToken from "../MiddleWare/authToken.js";
+import deltUser from "../controller/delUser.js";
 
 const Router = express.Router();
 
@@ -12,6 +13,7 @@ Router.post("/register" ,register);
 Router.post("/login", login);
 Router.get("/all", getAllUser);
 Router.get("/:id/getOne", getById);
-Router.patch("/:id", update);
+Router.patch("/:id/update", update);
+Router.delete("/:id/delete", deltUser);
 
 export default Router;
