@@ -55,7 +55,7 @@ if (existingEmail) {
    
     const token = jwt.sign({id:newUser._id}, process.env.ACCESS_TOKEN, {expiresIn:"2h"}, )
 
-    newUser.token = token,
+    newUser.token = token
     newUser.password = undefined
 
     return res.status(201).json({
@@ -65,7 +65,8 @@ if (existingEmail) {
             firstname:newUser.firstname,
             lastname:newUser.lastname,
             email:newUser.email,
-            token:token
+          token:"Token generated",
+          
         },
         success:true
     

@@ -40,3 +40,4 @@ const update = asyncHandler(async (req, res, next) => {
 });
 
 export default update;
+

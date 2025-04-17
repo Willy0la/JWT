@@ -51,12 +51,15 @@ const login = asyncHandler(async (req, res, next) => {
   }
   res.status(201).json({
     message:"User logged in",
-    token: token,
+    token: "token collected",
     data: user.username,
     success:true,
+    option:option
 
   })
 });
 
 
 export default login
+
+
