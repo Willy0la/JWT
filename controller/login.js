@@ -23,6 +23,8 @@ const login = asyncHandler(async (req, res, next) => {
 
   }
 
+  
+
   const user = await Consumer.findOne({username:username});
 
   if (!user) {

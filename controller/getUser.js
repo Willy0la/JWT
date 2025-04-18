@@ -8,6 +8,7 @@ const getAllUser = asyncHandler(async (req, res, next) => {
   try {
     const getAll = await Consumer.find();
 
+    
     res.json({
       message: "All Users",
       data: getAll,
